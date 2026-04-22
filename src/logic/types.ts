@@ -5,6 +5,7 @@ export type Agent {
   issuance: number
   claims: number
   bonus: number
+  pb: number
 }
 
 export type Operation {
