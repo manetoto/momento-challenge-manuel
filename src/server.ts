@@ -1,5 +1,5 @@
 import { getAgents, showList } from './logic/agents'
-import { getIssuance, getClaims, calculatePB, calculateSiniestralidad, calculateIssuance, calculateClaims, calculateBonus } from './logic/operations'
+import { getIssuance, getClaims, calculateIssuance, calculateClaims, calculateBonus } from './logic/operations'
 
 async function main () {
   const agents = await getAgents()
@@ -7,9 +7,9 @@ async function main () {
   const claims = await getClaims()
 
   for (const agent of agents) {
-    agent.issuance = calculateIssuance(agent, issuance).toFixed(2)
-    agent.claims = calculateClaims(agent, claims).toFixed(2)
-    agent.bonus = calculateBonus(agent).toFixed(2)
+    agent.issuance = Number(calculateIssuance(agent, issuance).toFixed(2))
+    agent.claims = Number(calculateClaims(agent, claims).toFixed(2))
+    agent.bonus = Number(calculateBonus(agent).toFixed(2))
   }
 
   showList(agents)
