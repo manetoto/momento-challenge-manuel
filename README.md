@@ -67,3 +67,4 @@ npx tsc -p tsconfig.json --noEmit
 ```
 
 ## Resultado
+<img width="1007" height="418" alt="Screenshot_20260422_194712" src="https://github.com/user-attachments/assets/5f42ec18-f4d3-46f0-9ab7-7a72c866399b" />
